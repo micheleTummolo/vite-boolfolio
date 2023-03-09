@@ -28,24 +28,43 @@ export default {
 
 <template>
     <div class="container">
-        <div v-if="loading">
-            <div class="loader"></div>
+        <div v-if="loading" class="row d-flex justify-content-center align-items-center mt-5">
+            <div class="col-12 d-flex justify-content-center align-items-center flex-column">
+                <div class="loader"></div>
+                <h3 class="mt-3 fw-bold">Loading...</h3>
+            </div>
         </div>
-        <div v-else>
-
+        <div v-else class="row row-cols-md-4 row-cols-lg-6">
+            <div class="col m-2 p-0" v-for="project in projects" :key="project.id">
+                <div class="card">
+                    <img :src="`${baseUrl}/storage/${project.cover_image}`" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="card_body_content">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">Continua a leggere</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+.card_body_content {
+    height: 200px;
+    overflow: hidden;
+}
+
 .loader {
-    border: 16px solid #f3f3f3;
+    border: 8px solid #f3f3f3;
     /* Light grey */
-    border-top: 16px solid #3498db;
+    border-top: 8px solid #3498db;
     /* Blue */
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     animation: spin 2s linear infinite;
 }
 
