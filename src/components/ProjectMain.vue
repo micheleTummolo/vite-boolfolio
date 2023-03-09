@@ -34,10 +34,13 @@ export default {
                 <h3 class="mt-3 fw-bold">Loading...</h3>
             </div>
         </div>
-        <div v-else class="row row-cols-md-4 row-cols-lg-6">
-            <div class="col m-2 p-0" v-for="project in projects" :key="project.id">
-                <div class="card">
-                    <img :src="`${baseUrl}/storage/${project.cover_image}`" class="card-img-top" alt="...">
+        <div v-else class="row">
+            <div class="col-12 col-md-3 p-0" v-for="project in projects" :key="project.id">
+                <div class="card m-2">
+                    <div class="card_img_container">
+                        <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
+                            class="card-img-top" alt="...">
+                    </div>
                     <div class="card-body">
                         <div class="card_body_content">
                             <h5 class="card-title">{{ project.name }}</h5>
@@ -52,6 +55,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card_img_container {
+    height: 200px;
+}
+
 .card_body_content {
     height: 200px;
     overflow: hidden;
