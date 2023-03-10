@@ -28,9 +28,12 @@ export default {
 
 <template>
     <div class="container">
-        <div v-if="loading" class="row d-flex justify-content-center align-items-center mt-5">
+        <div v-if="loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
-                <div class="loader"></div>
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
                 <h3 class="mt-3 fw-bold">Loading...</h3>
             </div>
         </div>
