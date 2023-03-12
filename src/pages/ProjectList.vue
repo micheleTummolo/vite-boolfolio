@@ -16,7 +16,6 @@ export default {
             axios.get(`${this.store.baseUrl}/api/projects`).then((response) => {
                 this.projects = response.data.projects;
                 this.store.loading = false;
-                console.log(this.projects);
             })
         }
     },

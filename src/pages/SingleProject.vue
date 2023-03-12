@@ -15,7 +15,6 @@ export default {
         axios.get(`${this.store.baseUrl}/api/projects/${this.$route.params.slug}`).then((response) => {
             this.project = response.data.project;
             this.store.loading = false;
-            console.log(this.project)
         })
     }
 }
