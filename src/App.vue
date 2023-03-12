@@ -1,14 +1,13 @@
 <script>
-import ProjectMain from './components/ProjectMain.vue'
 export default {
   components: {
-    ProjectMain
+
   }
 }
 </script>
 
 <template>
-  <ProjectMain></ProjectMain>
+  <router-view></router-view>
 </template>
 
 <style lang="scss" scoped>
