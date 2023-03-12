@@ -1,26 +1,26 @@
 <script>
 import axios from 'axios';
+import { store } from '../store';
 
 export default {
-    name: "ProjectMain",
+    name: "ProjectList",
     data() {
         return {
             projects: [],
-            loading: true,
-            baseUrl: 'http://127.0.0.1:8000'
+            store,
         }
     },
     methods: {
         getProjects() {
-            this.loading = true;
-            axios.get(`${this.baseUrl}/api/projects`).then((response) => {
+            this.store.loading = true;
+            axios.get(`${this.store.baseUrl}/api/projects`).then((response) => {
                 this.projects = response.data.projects;
-                this.loading = false;
+                this.store.loading = false;
                 console.log(this.projects);
             })
         }
     },
-    mounted() {
+    beforeMount() {
         this.getProjects();
     }
 }
@@ -28,7 +28,7 @@ export default {
 
 <template>
     <div class="container">
-        <div v-if="loading" class="row d-flex justify-content-center align-items-center vh-100">
+        <div v-if="store.loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden">Loading...</span>
@@ -41,7 +41,7 @@ export default {
             <div class="col-12 col-md-3 p-0" v-for="project in projects" :key="project.id">
                 <div class="card m-2">
                     <div class="card_img_container">
-                        <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
+                        <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
                             class="card-img-top" alt="...">
                     </div>
                     <div class="card-body">
@@ -49,7 +49,10 @@ export default {
                             <h5 class="card-title">{{ project.name }}</h5>
                             <p class="card-text">{{ project.description }}</p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-2">Continua a leggere</a>
+                        <router-link :to="{ name: 'single-project', params: { slug: project.slug } }"
+                            class="btn btn-primary mt-2">
+                            Continua a leggere
+                        </router-link>
                     </div>
                 </div>
             </div>
