@@ -13,8 +13,13 @@ export default {
     beforeMount() {
         this.store.loading = true;
         axios.get(`${this.store.baseUrl}/api/projects/${this.$route.params.slug}`).then((response) => {
-            this.project = response.data.project;
-            this.store.loading = false;
+            if (!response.data.success) {
+                this.project = response.data.project;
+                this.store.loading = false;
+            }
+            else {
+                this.$router.push({ name: 'not-found' })
+            }
         })
     }
 }
