@@ -36,38 +36,59 @@ export default {
                 <h3 class="mt-3 fw-bold">Loading...</h3>
             </div>
         </div>
-        <div v-else class="row">
+        <div v-else class="row mt-5 d-flex justify-content-between">
             <div class="col-12 col-md-3 p-0" v-for="project in projects" :key="project.id">
-                <div class="card m-2">
-                    <div class="card_img_container">
-                        <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
-                            class="card-img-top" alt="...">
-                    </div>
-                    <div class="card-body">
-                        <div class="card_body_content">
-                            <h5 class="card-title">{{ project.name }}</h5>
-                            <p class="card-text">{{ project.description }}</p>
+
+                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="">
+                    <div class="my_card">
+                        <div class="card_img_container">
+                            <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
+                                alt="`${store.baseUrl}/storage/${project.cover_image}`">
                         </div>
-                        <router-link :to="{ name: 'single-project', params: { slug: project.slug } }"
-                            class="btn btn-primary mt-2">
-                            Continua a leggere
-                        </router-link>
+                        <div class="card_hover p-2 justify-content-center align-items-center">
+                            <h3 class="text-white fw-bold">{{ project.name }}</h3>
+                        </div>
                     </div>
-                </div>
+                </router-link>
+
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.card_img_container {
+.my_card {
+    width: 400px;
     height: 200px;
+    position: relative;
+
+    .card_img_container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+
+        }
+
+    }
+
+    &:hover .card_hover {
+        display: flex;
+    }
+
+    .card_hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.498);
+        display: none;
+    }
 }
 
-.card_body_content {
-    height: 200px;
-    overflow: hidden;
-}
 
 .loader {
     border: 8px solid #f3f3f3;
