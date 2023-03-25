@@ -37,7 +37,7 @@ export default {
             </div>
         </div>
         <div v-else class="row pt-3 p-5">
-            <div class="col-12 d-flex flex-wrap">
+            <div class="col-12 d-flex flex-wrap p-0">
                 <div class="p-0 m-3" v-for="project in projects" :key="project.id">
 
                     <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
