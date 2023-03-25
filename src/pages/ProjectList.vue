@@ -33,7 +33,7 @@ export default {
                     <span class="visually-hidden">Loading...</span>
                 </div>
 
-                <h3 class="mt-3 fw-bold">Loading...</h3>
+                <h3 class="mt-3 fw-bold text-white">Loading...</h3>
             </div>
         </div>
         <div v-else class="row pt-3 p-5">

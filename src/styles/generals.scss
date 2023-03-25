@@ -25,3 +25,14 @@ a {
         background-color: rgba(128, 128, 128, 0.283);
     }
 }
+
+.main_button_sm {
+    color: gray;
+    padding: .5rem 1rem;
+    border: 1px solid gray;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.283);
+    }
+}
