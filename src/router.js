@@ -15,13 +15,13 @@ const router = createRouter({
 
         },
         {
-            path: '/blog',
+            path: '/projects',
             name: 'projectlist',
             component: ProjectList
 
         },
         {
-            path: '/blog/:slug',
+            path: '/projects/:slug',
             name: 'single-project',
             component: SingleProject
 

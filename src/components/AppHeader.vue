@@ -9,7 +9,7 @@ export default {
                     routeName: 'homepage'
                 },
                 {
-                    label: 'Blog',
+                    label: 'Projects',
                     routeName: 'projectlist'
                 },
             ]
@@ -19,22 +19,14 @@ export default {
 </script>
 <template lang="">
     <header>
-        <nav class="navbar navbar-expand-lg px-5">
-            <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
-                            <router-link :to="{ name: item.routeName }" class="nav-link active text-white">
-                                {{ item.label }}
-                            </router-link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="d-flex align-items-center w-100 h-100 px-5 pt-2">
+            <ul class="d-flex m-0 p-0">
+                <li class="me-4" v-for="(item, index) in menuItems" :key="index">
+                    <router-link :to="{ name: item.routeName }" class="text-decoration-none">
+                        {{ item.label }}
+                    </router-link>
+                </li>
+            </ul>
         </nav>
     </header>
 </template>
@@ -42,6 +34,22 @@ export default {
 header {
     background-color: #080809;
     height: 7vh;
-    /* border: 1px solid white; */
+
+    ul {
+        list-style: none;
+
+        li {
+            font-size: 1rem;
+
+            a {
+                color: white;
+
+                &:hover {
+                    color: gray;
+                }
+            }
+
+        }
+    }
 }
 </style>
