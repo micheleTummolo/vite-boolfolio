@@ -12,6 +12,10 @@ export default {
                     label: 'Projects',
                     routeName: 'projectlist'
                 },
+                {
+                    label: 'Skills',
+                    routeName: 'skills'
+                },
             ]
         }
     }

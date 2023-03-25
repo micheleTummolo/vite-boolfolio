@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage.vue';
 import ProjectList from './pages/ProjectList.vue';
 import SingleProject from './pages/SingleProject.vue';
 import NotFound from './pages/NotFound.vue';
+import Skills from './pages/Skills.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,6 +25,12 @@ const router = createRouter({
             path: '/projects/:slug',
             name: 'single-project',
             component: SingleProject
+
+        },
+        {
+            path: '/skills',
+            name: 'skills',
+            component: Skills
 
         },
         {
