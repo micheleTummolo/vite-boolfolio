@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container-fluid">
         <div v-if="store.loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
                 <div class="spinner-border text-primary" role="status">
@@ -36,7 +36,7 @@ export default {
                 <h3 class="mt-3 fw-bold">Loading...</h3>
             </div>
         </div>
-        <div v-else class="row mt-5 d-flex justify-content-between">
+        <div v-else class="row p-5 d-flex justify-content-between">
             <div class="col-12 col-md-3 p-0" v-for="project in projects" :key="project.id">
 
                 <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="">
@@ -57,6 +57,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.container-fluid {
+    background-color: #080809;
+}
+
 .my_card {
     width: 400px;
     height: 200px;
