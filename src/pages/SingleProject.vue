@@ -50,7 +50,8 @@ export default {
             <div class="col-6 mt-4 col_img_button p-0">
 
                 <!-- Button trigger modal -->
-                <button type="button" class="my_button_modal p-0 m-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="my_button_modal p-0 m-0 w-100" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
                     <div class="button_img">
                         <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
                             alt="">

@@ -1,6 +1,21 @@
 <script>
 export default {
-    name: 'Skills'
+    name: 'Skills',
+    data() {
+        return {
+            skills: [
+                'HTML',
+                'CSS',
+                'SASS',
+                'VueJs',
+                'Vite',
+                'PHP',
+                'MySQL',
+                'Laravel',
+            ]
+        }
+    }
+
 }
 </script>
 <template lang="">
