@@ -36,21 +36,23 @@ export default {
                 <h3 class="mt-3 fw-bold">Loading...</h3>
             </div>
         </div>
-        <div v-else class="row p-5 d-flex justify-content-between">
-            <div class="col-12 col-md-3 p-0" v-for="project in projects" :key="project.id">
+        <div v-else class="row pt-3 p-5">
+            <div class="col-12 d-flex flex-wrap">
+                <div class="p-0 m-3" v-for="project in projects" :key="project.id">
 
-                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="">
-                    <div class="my_card">
-                        <div class="card_img_container">
-                            <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
-                                alt="`${store.baseUrl}/storage/${project.cover_image}`">
+                    <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
+                        <div class="my_card">
+                            <div class="card_img_container">
+                                <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
+                                    alt="`${store.baseUrl}/storage/${project.cover_image}`">
+                            </div>
+                            <div class="card_hover p-2 justify-content-center align-items-center">
+                                <h3 class="text-white fw-bold">{{ project.name }}</h3>
+                            </div>
                         </div>
-                        <div class="card_hover p-2 justify-content-center align-items-center">
-                            <h3 class="text-white fw-bold">{{ project.name }}</h3>
-                        </div>
-                    </div>
-                </router-link>
+                    </router-link>
 
+                </div>
             </div>
         </div>
     </div>
@@ -59,6 +61,8 @@ export default {
 <style lang="scss" scoped>
 .container-fluid {
     background-color: #080809;
+    overflow: auto;
+    height: 93vh;
 }
 
 .my_card {
@@ -69,11 +73,12 @@ export default {
     .card_img_container {
         width: 100%;
         height: 100%;
-        overflow: hidden;
 
         img {
             width: 100%;
-
+            object-fit: cover;
+            height: 100%;
+            object-position: top;
         }
 
     }
