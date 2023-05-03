@@ -37,22 +37,18 @@ export default {
             </div>
         </div>
         <div v-else class="row pt-3 p-5">
-            <div class="col-12 d-flex flex-wrap p-0">
-                <div class="p-0 m-3" v-for="project in projects" :key="project.id">
-
-                    <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
-                        <div class="my_card">
-                            <div class="card_img_container">
-                                <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
-                                    alt="`${store.baseUrl}/storage/${project.cover_image}`">
-                            </div>
-                            <div class="card_hover p-2 justify-content-center align-items-center">
-                                <h3 class="text-white fw-bold">{{ project.name }}</h3>
-                            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-xxl-2 p-2" v-for="project in projects" :key="project.id">
+                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
+                    <div class="my_card m-auto">
+                        <div class="card_img_container">
+                            <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
+                                alt="`${store.baseUrl}/storage/${project.cover_image}`">
                         </div>
-                    </router-link>
-
-                </div>
+                        <div class="card_hover p-2 justify-content-center align-items-center">
+                            <h3 class="text-white fw-bold">{{ project.name }}</h3>
+                        </div>
+                    </div>
+                </router-link>
             </div>
         </div>
     </div>
@@ -66,8 +62,8 @@ export default {
 }
 
 .my_card {
-    width: 400px;
-    height: 200px;
+    max-width: 400px;
+    max-height: 200px;
     position: relative;
 
     .card_img_container {
@@ -76,8 +72,8 @@ export default {
 
         img {
             width: 100%;
+            height: 200px;
             object-fit: cover;
-            height: 100%;
             object-position: top;
         }
 

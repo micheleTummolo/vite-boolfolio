@@ -12,8 +12,8 @@ export default {
                     <h2 class="subtitle">I'm a Full Stack Web Developer.</h2>
                 </div>
                 <div class="mt-3">
-                    <a href="https://www.linkedin.com/in/michele-tummolo-76498926a/" class="main_button me-4">LinkedIn</a>
-                    <a href="https://github.com/micheleTummolo" class="main_button">GitHub</a>
+                    <a href="https://www.linkedin.com/in/michele-tummolo-76498926a/" class="main_button me-4" target=”_blank”>LinkedIn</a>
+                    <a href="https://github.com/micheleTummolo" class="main_button" target=”_blank”>GitHub</a>
                 </div>
             </div>
         </div>

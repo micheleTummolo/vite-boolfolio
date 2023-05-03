@@ -7,7 +7,10 @@ export default {
                 'HTML',
                 'CSS',
                 'SASS',
+                'Bootstrap',
                 'VueJs',
+                'JavaScript',
+                'JQuery',
                 'Vite',
                 'PHP',
                 'MySQL',
@@ -21,8 +24,13 @@ export default {
 <template lang="">
     <div class="container-fluid">
         <div class="row h-100">
-            <div class="col px-5 h-100 text-center pt-5">
+            <!--<div class="col px-5 text-center pt-5">
                 <h2 class="text-white">Skills list</h2>
+            </div>-->
+            <div class="col-6 px-5 text-center pt-5">
+                <ul v-for="skill in skills" :key="skill.id">
+                    <li>{{skill}}</li>
+                </ul>
             </div>
         </div>
     </div>
