@@ -6,8 +6,8 @@ export default {
     name: 'SingleProject',
     data() {
         return {
+            project: [],
             store,
-            project: null,
         }
     },
     beforeMount() {
@@ -28,11 +28,8 @@ export default {
     <div class="container-fluid">
         <div v-if="store.loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-
-                <h3 class="mt-3 fw-bold">Loading...</h3>
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-xl text-white"></i>
+                <h3 class="mt-4 fw-bold text-white">Loading</h3>
             </div>
         </div>
         <div v-else class="row p-5 pb-0">

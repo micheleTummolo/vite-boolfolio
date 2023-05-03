@@ -29,11 +29,9 @@ export default {
     <div class="container-fluid">
         <div v-if="store.loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-
-                <h3 class="mt-3 fw-bold text-white">Loading...</h3>
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-xl text-white"></i>
+                <font-awesome-icons icon="HatWizard" />
+                <h3 class="mt-4 fw-bold text-white">Loading</h3>
             </div>
         </div>
         <div v-else class="row pt-3 p-5">
@@ -59,40 +57,43 @@ export default {
     background-color: #080809;
     overflow: auto;
     height: 93vh;
-}
 
-.my_card {
-    max-width: 400px;
-    max-height: 200px;
-    position: relative;
+    .my_card {
+        max-width: 400px;
+        max-height: 200px;
+        position: relative;
 
-    .card_img_container {
-        width: 100%;
-        height: 100%;
 
-        img {
+        .card_img_container {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            object-position: top;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: top;
+            }
+
         }
 
-    }
+        &:hover .card_hover {
+            display: flex;
+            border: 2px solid gray;
+        }
 
-    &:hover .card_hover {
-        display: flex;
-    }
-
-    .card_hover {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.498);
-        display: none;
+        .card_hover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.498);
+            display: none;
+        }
     }
 }
+
 
 
 .loader {
