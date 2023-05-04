@@ -43,7 +43,7 @@ export default {
             </div>
         </div>
 
-        <div class="row p-5 pt-3 animate__animated animate__fadeIn animate__delay-1s">
+        <div class="row p-5 pt-3">
             <div class="col-6 mt-4 col_img_button p-0">
 
                 <!-- Button trigger modal -->
