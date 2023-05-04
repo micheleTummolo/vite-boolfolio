@@ -16,9 +16,9 @@ export default {
                     label: 'Skills',
                     routeName: 'skills'
                 },
-            ]
+            ],
         }
-    }
+    },
 }
 </script>
 <template lang="">
@@ -26,7 +26,7 @@ export default {
         <nav class="d-flex align-items-center w-100 h-100 px-5 pt-2">
             <ul class="d-flex m-0 p-0">
                 <li class="me-4" v-for="(item, index) in menuItems" :key="index">
-                    <router-link :to="{ name: item.routeName }" class="text-decoration-none">
+                    <router-link :to="{ name: item.routeName }" class="text-decoration-none pb-1" :class="$route.name == item.routeName ? 'active' : ''">
                         {{ item.label }}
                     </router-link>
                 </li>
@@ -51,6 +51,10 @@ header {
                 &:hover {
                     color: gray;
                 }
+            }
+
+            .active {
+                border-bottom: 2px solid white;
             }
 
         }
