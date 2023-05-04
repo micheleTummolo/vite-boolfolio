@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid firefox_scroll">
         <div v-if="store.loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
                 <i class="fa-solid fa-spinner fa-spin-pulse fa-xl text-white"></i>

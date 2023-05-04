@@ -36,3 +36,28 @@ a {
         background-color: rgba(128, 128, 128, 0.283);
     }
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #323232;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+.firefox_scroll {
+    scrollbar-color: #ffffff #323232;
+    scrollbar-width: thin;
+}
