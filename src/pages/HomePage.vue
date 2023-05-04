@@ -8,12 +8,12 @@ export default {
         <div class="row h-100">
             <div class="col px-5 h-100 d-flex flex-column justify-content-center">
                 <div>
-                    <h1 class="main_title">Hi, I'm Michele.</h1>
-                    <h2 class="subtitle">I'm a Full Stack Web Developer.</h2>
+                    <h1 class="main_title animate__animated animate__fadeInLeftBig">Hi, I'm Michele.</h1>
+                    <h2 class="subtitle animate__animated animate__fadeInLeft">I'm a Full Stack Web Developer.</h2>
                 </div>
                 <div class="mt-3">
-                    <a href="https://www.linkedin.com/in/michele-tummolo-76498926a/" class="main_button me-4" target=”_blank”>LinkedIn</a>
-                    <a href="https://github.com/micheleTummolo" class="main_button" target=”_blank”>GitHub</a>
+                    <a href="https://www.linkedin.com/in/michele-tummolo-76498926a/" class="main_button me-4 animate__animated animate__flipInX animate__delay-1s d-inline-block" target=”_blank”>LinkedIn</a>
+                    <a href="https://github.com/micheleTummolo" class="main_button animate__animated animate__flipInX animate__delay-1s d-inline-block" target=”_blank”>GitHub</a>
                 </div>
             </div>
         </div>

@@ -25,14 +25,14 @@ export default {
 }
 </script>
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid overflow-x-hidden">
         <div v-if="store.loading" class="row d-flex justify-content-center align-items-center vh-100">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
                 <i class="fa-solid fa-spinner fa-spin-pulse fa-xl text-white"></i>
                 <h3 class="mt-4 fw-bold text-white">Loading</h3>
             </div>
         </div>
-        <div v-else class="row p-5 pb-0">
+        <div v-else class="row p-5 pb-0 animate__animated animate__flipInX">
             <div class="col p-0">
                 <h2>Project name: {{ project.name }}</h2>
             </div>
@@ -43,7 +43,7 @@ export default {
             </div>
         </div>
 
-        <div class="row p-5 pt-3">
+        <div class="row p-5 pt-3 animate__animated animate__fadeIn animate__delay-1s">
             <div class="col-6 mt-4 col_img_button p-0">
 
                 <!-- Button trigger modal -->

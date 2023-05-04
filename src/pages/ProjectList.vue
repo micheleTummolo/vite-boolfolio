@@ -37,7 +37,7 @@ export default {
         <div v-else class="row pt-3 p-5">
             <div class="col-12 col-sm-4 col-md-4 col-xxl-2 p-2" v-for="project in projects" :key="project.id">
                 <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
-                    <div class="my_card m-auto">
+                    <div class="my_card m-auto animate__animated animate__flipInX">
                         <div class="card_img_container">
                             <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/300/190'"
                                 alt="`${store.baseUrl}/storage/${project.cover_image}`">
