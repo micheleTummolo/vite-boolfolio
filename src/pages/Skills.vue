@@ -4,17 +4,16 @@ export default {
     data() {
         return {
             skills: [
-                'HTML',
-                'CSS',
-                'SASS',
-                'Bootstrap',
-                'VueJs',
-                'JavaScript',
-                'JQuery',
-                'Vite',
-                'PHP',
-                'MySQL',
-                'Laravel',
+                'html',
+                'css',
+                'sass',
+                'bootstrap',
+                'vuejs',
+                'javascript',
+                'jquery',
+                'php',
+                'mysql',
+                'laravel',
             ]
         }
     }
@@ -23,11 +22,9 @@ export default {
 </script>
 <template lang="">
     <div class="container-fluid">
-        <div class="row h-100">
-            <div class="col-6 px-5 text-center pt-5">
-                <ul v-for="skill in skills" :key="skill.id">
-                    <li>{{skill}}</li>
-                </ul>
+        <div class="row row-cols-5 h-100">
+            <div class="col p-0 d-flex justify-content-center align-items-center" v-for="skill in skills" :key="skill.id">
+                <img class="w-75" :src="`./src/assets/images/${skill}.svg`" alt="">
             </div>
         </div>
     </div>
