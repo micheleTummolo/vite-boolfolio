@@ -1,5 +1,3 @@
 # Boolfolio
 
-![Alt text](../../../../Downloads/boolfolio_0.png)
-![Alt text](../../../../Downloads/boolfolio_1.png)
-![Alt text](../../../../Downloads/boolfolio_2.png)
+![Alt text](../../../../Desktop/Screenshot%20progetti/boolfolio_0.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/Biglietto_treno_con_dati.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/Biglietto_treno_vuoto.png)![Alt text](../../../../Desktop/Screenshot%20progetti/boolfolio_1.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/Biglietto_treno_con_dati.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/Biglietto_treno_vuoto.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/boolfolio_0.png)![Alt text](../../../../Desktop/Screenshot%20progetti/boolfolio_2.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/Biglietto_treno_con_dati.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/Biglietto_treno_vuoto.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/boolfolio_0.png) ![Alt text](../../../../Desktop/Screenshot%20progetti/boolfolio_1.png)
